@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#FFD93B">
+  <title>Tiny Catch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.63f07cfa.css">
+</head>
+<body>
+  <main id="stage">
+    <canvas id="game" aria-label="Fishing scene. Drag or use the arrow keys to steer the hook."></canvas>
+
+    <div id="hud">
+      <header class="topbar">
+        <h1 class="title">Tiny Catch</h1>
+        <button id="sound" class="pill pill-quiet" type="button" aria-pressed="true">Sound on</button>
+      </header>
+
+      <section class="money-block" aria-label="Score">
+        <p id="money" class="money">$0</p>
+        <ul class="chips">
+          <li id="chip-depth" class="chip">Best 0 m</li>
+          <li id="chip-fish" class="chip">Caught 0</li>
+        </ul>
+      </section>
+
+      <div class="bottom">
+        <p id="hint" class="chip hint" hidden>Drag to steer the hook</p>
+        <button id="cast" class="pill pill-cast" type="button">Cast</button>
+        <div class="tiles">
+          <article class="tile" data-kind="fish">
+            <h2 class="tile-name">Max Fish</h2>
+            <p class="tile-value"><span class="cur"></span> <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span> <span class="nxt"></span></p>
+            <button class="pill pill-buy" type="button">Buy</button>
+          </article>
+          <article class="tile" data-kind="depth">
+            <h2 class="tile-name">Max Depth</h2>
+            <p class="tile-value"><span class="cur"></span> <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span> <span class="nxt"></span></p>
+            <button class="pill pill-buy" type="button">Buy</button>
+          </article>
+          <article class="tile" data-kind="offline">
+            <h2 class="tile-name">Offline Earnings</h2>
+            <p class="tile-value"><span class="cur"></span> <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span> <span class="nxt"></span></p>
+            <button class="pill pill-buy" type="button">Buy</button>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <dialog id="welcome" class="modal" aria-labelledby="welcome-title">
+      <h2 id="welcome-title" class="modal-title">Welcome back</h2>
+      <p class="modal-body">The crew kept fishing while you were away.</p>
+      <p id="welcome-amount" class="modal-amount">You earned $0</p>
+      <button id="welcome-collect" class="pill pill-cast" type="button">Collect</button>
+    </dialog>
+  </main>
+
+  <script type="module" src="js/main.63f07cfa.js"></script>
+</body>
+</html>
